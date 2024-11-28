@@ -18,4 +18,5 @@
 
 (defn calculate-players-predicted-points
   "A function that calculates a player's predicted points in the next gameweek."
-  [player])
+  [player]
+  player)
