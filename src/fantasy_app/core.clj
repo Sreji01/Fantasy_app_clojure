@@ -19,4 +19,8 @@
 (defn calculate-players-predicted-points
   "A function that calculates a player's predicted points in the next gameweek."
   [player]
-  player)
+  (let [{:keys [xg xa expected-bonus]} player
+        goal-points (* 4 xg)
+        assist-points (* 3 xa)
+        bonus-points (* 1 expected-bonus)]
+    (+ goal-points assist-points bonus-points)))

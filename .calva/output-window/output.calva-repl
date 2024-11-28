@@ -93,3 +93,67 @@ false
 clj꞉fantasy-app.core-test꞉> 
 true
 clj꞉fantasy-app.core-test꞉> 
+; 
+; FAIL Check if goal points are calculated correctly at (c:\Users\Nikola\Desktop\Clojure projekat\fantasy_app\test\fantasy_app\core_test.clj:24)
+; Expected:
+; 10
+; Actual:
+; {:expected-bonus 0 :xa 0 :xg 2.5}
+false
+clj꞉fantasy-app.core-test꞉> 
+#'fantasy-app.core/calculate-players-predicted-points
+clj꞉fantasy-app.core꞉> 
+; 
+; FAIL Check if goal points are calculated correctly at (c:\Users\Nikola\Desktop\Clojure projekat\fantasy_app\test\fantasy_app\core_test.clj:24)
+; Expected:
+; 10
+; Actual:
+; 10.0
+false
+clj꞉fantasy-app.core-test꞉> 
+#'fantasy-app.core/calculate-players-predicted-points
+clj꞉fantasy-app.core꞉> 
+; 
+; FAIL Check if goal points are calculated correctly at (c:\Users\Nikola\Desktop\Clojure projekat\fantasy_app\test\fantasy_app\core_test.clj:24)
+; Expected:
+; 10
+; Actual:
+; 10.0
+false
+clj꞉fantasy-app.core-test꞉> 
+#'fantasy-app.core/calculate-players-predicted-points
+clj꞉fantasy-app.core꞉> 
+; 
+; FAIL Check if goal points are calculated correctly at (c:\Users\Nikola\Desktop\Clojure projekat\fantasy_app\test\fantasy_app\core_test.clj:24)
+; Expected:
+; 10
+; Actual:
+; 10.0
+false
+clj꞉fantasy-app.core-test꞉> 
+#'fantasy-app.core/calculate-players-predicted-points
+clj꞉fantasy-app.core꞉> 
+; 
+; FAIL Check if goal points are calculated correctly at (c:\Users\Nikola\Desktop\Clojure projekat\fantasy_app\test\fantasy_app\core_test.clj:24)
+; Expected:
+; 10
+; Actual:
+; 10.0
+false
+clj꞉fantasy-app.core-test꞉> 
+#'fantasy-app.core/calculate-players-predicted-points
+clj꞉fantasy-app.core꞉> 
+; 
+; FAIL Check if goal points are calculated correctly at (c:\Users\Nikola\Desktop\Clojure projekat\fantasy_app\test\fantasy_app\core_test.clj:24)
+; Expected:
+; 14
+; Actual:
+; 14.0
+false
+clj꞉fantasy-app.core-test꞉> 
+(calculate-players-predicted-points)#'fantasy-app.core/calculate-players-predicted-points
+clj꞉fantasy-app.core꞉> 
+#'fantasy-app.core-test/test-player
+clj꞉fantasy-app.core-test꞉> 
+true
+clj꞉fantasy-app.core-test꞉> 
