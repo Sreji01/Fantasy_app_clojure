@@ -15,3 +15,7 @@
    {:id 606 :now-cost 60 :xg 0.20 :xa 0.10 :expected-bonus 1 :element_type 3}
    {:id 707 :now-cost 85 :xg 0.35 :xa 0.18 :expected-bonus 5 :element_type 4}
    {:id 808 :now-cost 55 :xg 0.12 :xa 0.25 :expected-bonus 2 :element_type 2}])
+
+(defn calculate-players-predicted-points
+  "A function that calculates a player's predicted points in the next gameweek."
+  [player])

@@ -1,1 +1,1 @@
-["^ ","~$a-test",["^ ","~:row",6,"~:col",1,"~:fixed-arities",["~#set",[0]],"~:name","^0","~:ns","~$fantasy-app.core-test","~:top-ns","^7"],"~:filename","C:\\Users\\Nikola\\Desktop\\Clojure projekat\\fantasy_app\\test\\fantasy_app\\core_test.clj"]
+["^ ","~$a-test",["^ ","~:row",6,"~:col",1,"~:fixed-arities",["~#set",[0]],"~:name","^0","~:ns","~$fantasy-app.core-test","~:top-ns","^7"],"~$all-players",["^ ","^1",10,"^2",1,"^5","^9","^6","^7","^8","^7","~:type","~:vector"],"~:filename","C:\\Users\\Nikola\\Desktop\\Clojure projekat\\fantasy_app\\test\\fantasy_app\\core_test.clj"]
