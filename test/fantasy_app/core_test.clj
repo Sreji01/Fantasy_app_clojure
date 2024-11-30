@@ -29,3 +29,8 @@
 (fact "Check if there is a return value"
       (suggest-best-captain all-players) =not=> nil)
 
+(fact "Check if the returned player is the one with max predicted points"
+      (suggest-best-captain all-players) => (nth all-players 6))
+
+
+

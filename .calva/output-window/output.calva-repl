@@ -203,3 +203,25 @@ clj꞉fantasy-app.core-test꞉> 
 clj꞉fantasy-app.core꞉> 
 true
 clj꞉fantasy-app.core-test꞉> 
+#'fantasy-app.core/suggest-best-captain
+clj꞉fantasy-app.core꞉> 
+; Execution error (ClassCastException) at fantasy-app.core-test/eval10036 (form-init7067257509939231424.clj:32).
+; class java.lang.Boolean cannot be cast to class clojure.lang.IFn (java.lang.Boolean is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉fantasy-app.core-test꞉> 
+; Execution error (ClassCastException) at fantasy-app.core-test/eval10044 (form-init7067257509939231424.clj:32).
+; class java.lang.Boolean cannot be cast to class clojure.lang.IFn (java.lang.Boolean is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉fantasy-app.core-test꞉> 
+(suggest-best-captain all-players)
+{:id 707, :now-cost 85, :xg 0.35, :xa 0.18, :expected-bonus 5, :element_type 4}
+clj꞉fantasy-app.core-test꞉> 
+(get all-players 6)
+{:id 707, :now-cost 85, :xg 0.35, :xa 0.18, :expected-bonus 5, :element_type 4}
+clj꞉fantasy-app.core-test꞉> 
+; Execution error (ClassCastException) at fantasy-app.core-test/eval10056 (form-init7067257509939231424.clj:32).
+; class java.lang.Boolean cannot be cast to class clojure.lang.IFn (java.lang.Boolean is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉fantasy-app.core-test꞉> 
+(nth all-players 6)
+{:id 707, :now-cost 85, :xg 0.35, :xa 0.18, :expected-bonus 5, :element_type 4}
+clj꞉fantasy-app.core-test꞉> 
+true
+clj꞉fantasy-app.core-test꞉> 
