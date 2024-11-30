@@ -23,4 +23,5 @@
 
 (defn suggest-best-transfer
   "A function that returns best replacement for the selected players."
-  [all-players & selected-player])
+  [all-players & selected-player]
+  (take (count selected-player) all-players))

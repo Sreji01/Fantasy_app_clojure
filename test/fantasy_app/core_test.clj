@@ -33,11 +33,12 @@
       (suggest-best-captain all-players) => (nth all-players 6))
 
 (fact "Check if there is a return value"
+      (rank-players all-players) =not=> nil)
+
+(fact "Check if there is a return value"
       (suggest-best-transfer all-players (get all-players 2) (get all-players 4)) =not=> nil)
 
 (fact "Check if the number of returned players is the same as selected players"
-       (count ((suggest-best-transfer all-players (get all-players 2) (get all-players 4)))) => 2)
+       (count (suggest-best-transfer all-players (get all-players 3) (get all-players 4))) => 2)
 
-(fact "Check if there is a return value"
-      (rank-players all-players) =not=> nil)
 

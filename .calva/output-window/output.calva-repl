@@ -271,3 +271,30 @@ clj꞉fantasy-app.core꞉> 
 ; nil
 false
 clj꞉fantasy-app.core-test꞉> 
+#'fantasy-app.core/suggest-best-transfer
+clj꞉fantasy-app.core꞉> 
+; 
+; FAIL Check if the number of returned players is the same as selected players at (c:\Users\Nikola\Desktop\Clojure projekat\fantasy_app\test\fantasy_app\core_test.clj:42)
+; Expected:
+; 2
+; Actual:
+; java.lang.ClassCastException: class clojure.lang.LazySeq cannot be cast to class clojure.lang.IFn (clojure.lang.LazySeq and clojure.lang.IFn are in unnamed module of loader 'app')
+;   fantasy_app.core_test$eval10166$fn__10167$fn__10168$fn__10169.invoke(form-init7067257509939231424.clj:42)
+;   fantasy_app.core_test$eval10166$fn__10167$fn__10168.invoke(form-init7067257509939231424.clj:41)
+;   fantasy_app.core_test$eval10166$fn__10167.invoke(form-init7067257509939231424.clj:41)
+;   fantasy_app.core_test$eval10166.invokeStatic(form-init7067257509939231424.clj:41)
+;   fantasy_app.core_test$eval10166.invoke(form-init7067257509939231424.clj:41)
+;   nrepl.middleware.interruptible_eval$evaluate$fn__1271$fn__1272.invoke(interruptible_eval.clj:87)
+;   nrepl.middleware.interruptible_eval$evaluate$fn__1271.invoke(interruptible_eval.clj:87)
+;   nrepl.middleware.interruptible_eval$evaluate.invokeStatic(interruptible_eval.clj:84)
+;   nrepl.middleware.interruptible_eval$evaluate.invoke(interruptible_eval.clj:56)
+;   nrepl.middleware.interruptible_eval$interruptible_eval$fn__1304$fn__1308.invoke(interruptible_eval.clj:152)
+;   nrepl.middleware.session$session_exec$main_loop__1374$fn__1378.invoke(session.clj:218)
+;   nrepl.middleware.session$session_exec$main_loop__1374.invoke(session.clj:217)
+false
+clj꞉fantasy-app.core-test꞉> 
+(suggest-best-transfer all-players (get all-players 3) (get all-players 4))
+({:id 101, :now-cost 81, :xg 0.15, :xa 0.08, :expected-bonus 3, :element_type 2} {:id 202, :now-cost 65, :xg 0.3, :xa 0.12, :expected-bonus 5, :element_type 4})
+clj꞉fantasy-app.core-test꞉> 
+true
+clj꞉fantasy-app.core-test꞉> 
