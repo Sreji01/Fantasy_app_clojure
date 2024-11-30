@@ -16,4 +16,6 @@
 [team]
   (first (sort-by (fn [player] (- (calculate-players-predicted-points player))) team)))
 
-
+(defn suggest-best-transfer
+  "A function that returns best replacement for the selected players."
+  [all-players & selected-player])

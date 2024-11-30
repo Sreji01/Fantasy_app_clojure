@@ -225,3 +225,13 @@ clj꞉fantasy-app.core-test꞉> 
 clj꞉fantasy-app.core-test꞉> 
 true
 clj꞉fantasy-app.core-test꞉> 
+#'fantasy-app.core/suggest-best-transfer
+clj꞉fantasy-app.core꞉> 
+; 
+; FAIL Check if there is a return value at (c:\Users\Nikola\Desktop\Clojure projekat\fantasy_app\test\fantasy_app\core_test.clj:36)
+; Expected: Anything BUT
+; nil
+; Actual:
+; nil
+false
+clj꞉fantasy-app.core-test꞉> 

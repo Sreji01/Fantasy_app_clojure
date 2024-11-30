@@ -32,5 +32,7 @@
 (fact "Check if the returned player is the one with max predicted points"
       (suggest-best-captain all-players) => (nth all-players 6))
 
+(fact "Check if there is a return value"
+      (suggest-best-transfer all-players (get all-players 2) (get all-players 4)) =not=> nil)
 
 
