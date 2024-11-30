@@ -235,3 +235,39 @@ clj꞉fantasy-app.core꞉> 
 ; nil
 false
 clj꞉fantasy-app.core-test꞉> 
+; Syntax error (ArityException) compiling count at (c:\Users\Nikola\Desktop\Clojure projekat\fantasy_app\test\fantasy_app\core_test.clj:39:8).
+; Wrong number of args (3) passed to: clojure.core/count--inliner--5586
+clj꞉fantasy-app.core-test꞉> 
+; 
+; FAIL Check if the number of returned players is the same as selected players at (c:\Users\Nikola\Desktop\Clojure projekat\fantasy_app\test\fantasy_app\core_test.clj:39)
+; Expected:
+; 2
+; Actual:
+; java.lang.NullPointerException: Cannot invoke "clojure.lang.IFn.invoke()" because the return value of "clojure.lang.IFn.invoke(Object, Object, Object)" is null
+;   fantasy_app.core_test$eval10104$fn__10105$fn__10106$fn__10107.invoke(form-init7067257509939231424.clj:39)
+;   fantasy_app.core_test$eval10104$fn__10105$fn__10106.invoke(form-init7067257509939231424.clj:38)
+;   fantasy_app.core_test$eval10104$fn__10105.invoke(form-init7067257509939231424.clj:38)
+;   fantasy_app.core_test$eval10104.invokeStatic(form-init7067257509939231424.clj:38)
+;   fantasy_app.core_test$eval10104.invoke(form-init7067257509939231424.clj:38)
+;   nrepl.middleware.interruptible_eval$evaluate$fn__1271$fn__1272.invoke(interruptible_eval.clj:87)
+;   nrepl.middleware.interruptible_eval$evaluate$fn__1271.invoke(interruptible_eval.clj:87)
+;   nrepl.middleware.interruptible_eval$evaluate.invokeStatic(interruptible_eval.clj:84)
+;   nrepl.middleware.interruptible_eval$evaluate.invoke(interruptible_eval.clj:56)
+;   nrepl.middleware.interruptible_eval$interruptible_eval$fn__1304$fn__1308.invoke(interruptible_eval.clj:152)
+;   nrepl.middleware.session$session_exec$main_loop__1374$fn__1378.invoke(session.clj:218)
+;   nrepl.middleware.session$session_exec$main_loop__1374.invoke(session.clj:217)
+false
+clj꞉fantasy-app.core-test꞉> 
+; Syntax error compiling at (c:\Users\Nikola\Desktop\Clojure projekat\fantasy_app\test\fantasy_app\core_test.clj:42:7).
+; Unable to resolve symbol: rank-players in this context
+clj꞉fantasy-app.core-test꞉> 
+#'fantasy-app.core/rank-players
+clj꞉fantasy-app.core꞉> 
+; 
+; FAIL Check if there is a return value at (c:\Users\Nikola\Desktop\Clojure projekat\fantasy_app\test\fantasy_app\core_test.clj:42)
+; Expected: Anything BUT
+; nil
+; Actual:
+; nil
+false
+clj꞉fantasy-app.core-test꞉> 
