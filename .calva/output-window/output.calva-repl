@@ -157,3 +157,49 @@ clj꞉fantasy-app.core꞉> 
 clj꞉fantasy-app.core-test꞉> 
 true
 clj꞉fantasy-app.core-test꞉> 
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Connecting ...
+; Reading port file: file:///c%3A/Users/Nikola/Desktop/Clojure%20projekat/fantasy_app/.nrepl-port ...
+; Using host:port localhost:64556 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉fantasy-app.core꞉> 
+"Please see https://calva.io/output/#about-stdout-in-the-repl-window
+about why stdout printed to this file is prepended with `;` to be line comments."
+clj꞉fantasy-app.core꞉> 
+#'fantasy-app.core/suggest-best-captain
+clj꞉fantasy-app.core꞉> 
+; 
+; FAIL Check if there is a return value at (c:\Users\Nikola\Desktop\Clojure projekat\fantasy_app\test\fantasy_app\core_test.clj:30)
+; Expected: Anything BUT
+; nil
+; Actual:
+; nil
+false
+clj꞉fantasy-app.core-test꞉> 
+; 
+; FAIL Check if there is a return value at (c:\Users\Nikola\Desktop\Clojure projekat\fantasy_app\test\fantasy_app\core_test.clj:30)
+; Expected: Anything BUT
+; nil
+; Actual:
+; nil
+false
+clj꞉fantasy-app.core-test꞉> 
+; 
+; FAIL Check if there is a return value at (c:\Users\Nikola\Desktop\Clojure projekat\fantasy_app\test\fantasy_app\core_test.clj:30)
+; Expected: Anything BUT
+; nil
+; Actual:
+; nil
+false
+clj꞉fantasy-app.core-test꞉> 
+#'fantasy-app.core/suggest-best-captain
+clj꞉fantasy-app.core꞉> 
+true
+clj꞉fantasy-app.core-test꞉> 

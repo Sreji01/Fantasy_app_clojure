@@ -25,3 +25,7 @@
 (fact "Check if goal points are calculated correctly"
       (calculate-players-predicted-points test-player)
       => 12)
+
+(fact "Check if there is a return value"
+      (suggest-best-captain all-players) =not=> nil)
+
