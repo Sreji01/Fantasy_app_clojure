@@ -646,3 +646,82 @@ true
 clj꞉fantasy-app.core-test꞉> 
 true
 clj꞉fantasy-app.core-test꞉> 
+true
+clj꞉fantasy-app.core-test꞉> 
+#'fantasy-app.core/suggest-best-transfer
+clj꞉fantasy-app.core꞉> 
+true
+clj꞉fantasy-app.core-test꞉> 
+; 
+; FAIL Check if the number of returned players is the same as selected players at (c:\Users\Nikola\Desktop\Clojure projekat\fantasy_app\test\fantasy_app\core_test.clj:42)
+; Expected:
+; 2
+; Actual:
+; 1
+false
+clj꞉fantasy-app.core-test꞉> 
+#'fantasy-app.core/suggest-best-transfer
+clj꞉fantasy-app.core꞉> 
+(suggest-best-transfer all-players 1 (get all-players 2))
+; Syntax error compiling at (c:\Users\Nikola\Desktop\Clojure projekat\fantasy_app\.calva\output-window\output.calva-repl:665:1).
+; Unable to resolve symbol: all-players in this context
+clj꞉fantasy-app.core꞉> 
+#'fantasy-app.core-test/all-players
+clj꞉fantasy-app.core-test꞉> 
+(suggest-best-transfer all-players 1 (get all-players 2))
+({:id 707, :now-cost 85, :xg 0.35, :xa 0.18, :expected-bonus 3, :element_type 4})
+clj꞉fantasy-app.core-test꞉> 
+(map :now-cost (suggest-best-transfer all-players 1 (get all-players 2)))
+(85)
+clj꞉fantasy-app.core-test꞉> 
+(reduce + (map :now-cost (suggest-best-transfer all-players 1 (get all-players 2))))
+85
+clj꞉fantasy-app.core-test꞉> 
+(suggest-best-transfer all-players 1 (get all-players 2) (get all-players 4))
+({:id 707, :now-cost 85, :xg 0.35, :xa 0.18, :expected-bonus 3, :element_type 4} {:id 404, :now-cost 90, :xg 0.4, :xa 0.05, :expected-bonus 3, :element_type 4})
+clj꞉fantasy-app.core-test꞉> 
+(reduce + (map :now-cost (suggest-best-transfer all-players 1 (get all-players 2) (get all-players 4))))
+175
+clj꞉fantasy-app.core-test꞉> 
+(+ 1 (:now-cost (get all-players 2)))
+71
+clj꞉fantasy-app.core-test꞉> 
+; 
+; FAIL Check if the sum of returned player's prices and money in bank are equal or lower than the price of selected players. at (c:\Users\Nikola\Desktop\Clojure projekat\fantasy_app\test\fantasy_app\core_test.clj:48)
+; Expected:
+; true
+; Actual:
+; false
+false
+clj꞉fantasy-app.core-test꞉> 
+(reduce + (map :now-cost (suggest-best-transfer all-players 10 (get all-players 2))))
+85
+clj꞉fantasy-app.core-test꞉> 
+(+ 10 (:now-cost (get all-players 2)))
+80
+clj꞉fantasy-app.core-test꞉> 
+#'fantasy-app.core/suggest-best-transfer
+clj꞉fantasy-app.core꞉> 
+#'fantasy-app.core-test/all-players
+clj꞉fantasy-app.core-test꞉> 
+((suggest-best-transfer all-players 10 (get all-players 1)))
+; Execution error (ArityException) at fantasy-app.core-test/eval10396 (form-init11622345859649299467.clj:707).
+; Wrong number of args (0) passed to: clojure.lang.PersistentVector
+clj꞉fantasy-app.core-test꞉> 
+#'fantasy-app.core/suggest-best-transfer
+clj꞉fantasy-app.core꞉> 
+(suggest-best-transfer all-players 10 (get all-players 1))
+; Syntax error compiling at (c:\Users\Nikola\Desktop\Clojure projekat\fantasy_app\.calva\output-window\output.calva-repl:713:1).
+; Unable to resolve symbol: all-players in this context
+clj꞉fantasy-app.core꞉> 
+#'fantasy-app.core-test/all-players
+clj꞉fantasy-app.core-test꞉> 
+(suggest-best-transfer all-players 20 (get all-players 1))
+[{:id 505, :now-cost 75, :xg 0.25, :xa 0.15, :expected-bonus 2, :element_type 3}]
+clj꞉fantasy-app.core-test꞉> 
+[{:id 505, :now-cost 75, :xg 0.25, :xa 0.15, :expected-bonus 2, :element_type 3}]
+clj꞉fantasy-app.core-test꞉> 
+[{:id 707, :now-cost 85, :xg 0.35, :xa 0.18, :expected-bonus 3, :element_type 4}]
+clj꞉fantasy-app.core-test꞉> 
+true
+clj꞉fantasy-app.core-test꞉> 

@@ -23,7 +23,27 @@
 
 (defn suggest-best-transfer
   "A function that returns best replacement for the selected players."
-  [all-players & selected-players]
-  (take (count selected-players) (filter #(not (some (fn[player] (= (:id player) (:id %))) selected-players)) (rank-players all-players))))
+  [all-players money-in-bank & transfered-out]
+  (let [potential-transfers (filter #(not (some (fn [player] (= (:id player) (:id %))) transfered-out)) (rank-players all-players))
+        budget (+ money-in-bank (reduce + (map :now-cost transfered-out)))]
+    (loop [remaining potential-transfers
+           selected-players []
+           total-price 0]
+      (if (or (empty? remaining)
+              (= (count selected-players) (count transfered-out)))
+        selected-players
+        (let [new-price (+ total-price (:now-cost (first remaining)))]
+          (if (<= new-price budget)
+            (recur (rest remaining) (conj selected-players (first remaining)) new-price)
+            (recur (rest remaining) selected-players total-price)))))))
+
+(defn suggest-best-transfer1
+  "A function that returns the best replacement for the selected players 
+   such that the total cost is within the allowed budget."
+  [all-players money-in-bank & selected-players]
+  (let [total-budget (+ money-in-bank (reduce + (map :now-cost selected-players)))]
+    (take (count selected-players) (filter #(and (not (some (fn [player] (= (:id player) (:id %))) selected-players)) 
+                        (<= (:now-cost %) (/ total-budget (count selected-players))))
+                  (rank-players all-players)))))
 
 
