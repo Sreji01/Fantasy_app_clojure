@@ -725,3 +725,57 @@ clj꞉fantasy-app.core-test꞉> 
 clj꞉fantasy-app.core-test꞉> 
 true
 clj꞉fantasy-app.core-test꞉> 
+; 
+; FAIL Check if the returned players are not the same as selected players. at (c:\Users\Nikola\Desktop\Clojure projekat\fantasy_app\test\fantasy_app\core_test.clj:45)
+; Expected:
+; true
+; Actual:
+; java.lang.ClassCastException: class clojure.lang.PersistentArrayMap cannot be cast to class java.lang.Number (clojure.lang.PersistentArrayMap is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')
+;   fantasy_app.core$suggest_best_transfer.invokeStatic(form-init11622345859649299467.clj:28)
+;   fantasy_app.core$suggest_best_transfer.doInvoke(form-init11622345859649299467.clj:24)
+;   fantasy_app.core_test$eval10441$fn__10442$fn__10443$fn__10444.invoke(form-init11622345859649299467.clj:45)
+;   fantasy_app.core_test$eval10441$fn__10442$fn__10443.invoke(form-init11622345859649299467.clj:44)
+;   fantasy_app.core_test$eval10441$fn__10442.invoke(form-init11622345859649299467.clj:44)
+;   fantasy_app.core_test$eval10441.invokeStatic(form-init11622345859649299467.clj:44)
+;   fantasy_app.core_test$eval10441.invoke(form-init11622345859649299467.clj:44)
+;   nrepl.middleware.interruptible_eval$evaluate$fn__1275$fn__1276.invoke(interruptible_eval.clj:87)
+;   nrepl.middleware.interruptible_eval$evaluate$fn__1275.invoke(interruptible_eval.clj:87)
+;   nrepl.middleware.interruptible_eval$evaluate.invokeStatic(interruptible_eval.clj:84)
+;   nrepl.middleware.interruptible_eval$evaluate.invoke(interruptible_eval.clj:56)
+;   nrepl.middleware.interruptible_eval$interruptible_eval$fn__1308$fn__1312.invoke(interruptible_eval.clj:152)
+;   nrepl.middleware.session$session_exec$main_loop__1378$fn__1382.invoke(session.clj:218)
+;   nrepl.middleware.session$session_exec$main_loop__1378.invoke(session.clj:217)
+false
+clj꞉fantasy-app.core-test꞉> 
+; 
+; FAIL Check if the number of returned players is the same as selected players at (c:\Users\Nikola\Desktop\Clojure projekat\fantasy_app\test\fantasy_app\core_test.clj:42)
+; Expected:
+; 2
+; Actual:
+; java.lang.ClassCastException: class clojure.lang.PersistentArrayMap cannot be cast to class java.lang.Number (clojure.lang.PersistentArrayMap is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')
+;   fantasy_app.core$suggest_best_transfer.invokeStatic(form-init11622345859649299467.clj:28)
+;   fantasy_app.core$suggest_best_transfer.doInvoke(form-init11622345859649299467.clj:24)
+;   fantasy_app.core_test$eval10451$fn__10452$fn__10453$fn__10454.invoke(form-init11622345859649299467.clj:42)
+;   fantasy_app.core_test$eval10451$fn__10452$fn__10453.invoke(form-init11622345859649299467.clj:41)
+;   fantasy_app.core_test$eval10451$fn__10452.invoke(form-init11622345859649299467.clj:41)
+;   fantasy_app.core_test$eval10451.invokeStatic(form-init11622345859649299467.clj:41)
+;   fantasy_app.core_test$eval10451.invoke(form-init11622345859649299467.clj:41)
+;   nrepl.middleware.interruptible_eval$evaluate$fn__1275$fn__1276.invoke(interruptible_eval.clj:87)
+;   nrepl.middleware.interruptible_eval$evaluate$fn__1275.invoke(interruptible_eval.clj:87)
+;   nrepl.middleware.interruptible_eval$evaluate.invokeStatic(interruptible_eval.clj:84)
+;   nrepl.middleware.interruptible_eval$evaluate.invoke(interruptible_eval.clj:56)
+;   nrepl.middleware.interruptible_eval$interruptible_eval$fn__1308$fn__1312.invoke(interruptible_eval.clj:152)
+;   nrepl.middleware.session$session_exec$main_loop__1378$fn__1382.invoke(session.clj:218)
+;   nrepl.middleware.session$session_exec$main_loop__1378.invoke(session.clj:217)
+false
+clj꞉fantasy-app.core-test꞉> 
+#'fantasy-app.core/create-optimal-team
+clj꞉fantasy-app.core꞉> 
+; 
+; FAIL Check if there is a return value at (c:\Users\Nikola\Desktop\Clojure projekat\fantasy_app\test\fantasy_app\core_test.clj:51)
+; Expected: Anything BUT
+; nil
+; Actual:
+; nil
+false
+clj꞉fantasy-app.core-test꞉> 

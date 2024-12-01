@@ -47,6 +47,9 @@
 (fact "Check if the sum of returned player's prices and money in bank are equal or lower than the price of selected players."
       (<= (reduce + (map :now-cost (suggest-best-transfer all-players 10 (get all-players 2)))) (+ 10 (:now-cost (get all-players 2)))) => true)
 
+(fact "Check if there is a return value"
+      (create-optimal-team all-players) =not=> nil)
+
 
 
 

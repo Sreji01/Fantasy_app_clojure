@@ -37,13 +37,7 @@
             (recur (rest remaining) (conj selected-players (first remaining)) new-price)
             (recur (rest remaining) selected-players total-price)))))))
 
-(defn suggest-best-transfer1
-  "A function that returns the best replacement for the selected players 
-   such that the total cost is within the allowed budget."
-  [all-players money-in-bank & selected-players]
-  (let [total-budget (+ money-in-bank (reduce + (map :now-cost selected-players)))]
-    (take (count selected-players) (filter #(and (not (some (fn [player] (= (:id player) (:id %))) selected-players)) 
-                        (<= (:now-cost %) (/ total-budget (count selected-players))))
-                  (rank-players all-players)))))
-
+(defn create-optimal-team
+  "A function that creates user's otpimal team."
+  [team])
 
