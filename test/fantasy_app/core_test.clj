@@ -41,4 +41,9 @@
 (fact "Check if the number of returned players is the same as selected players"
        (count (suggest-best-transfer all-players (get all-players 3) (get all-players 4))) => 2)
 
+(fact "Check if the returned players are not the same as selected players."
+      (every? #(not (= (:id %) (:id (get all-players 6)))) (suggest-best-transfer all-players (get all-players 6))) => true)
+
+
+
 

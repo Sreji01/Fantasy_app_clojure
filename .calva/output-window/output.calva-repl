@@ -298,3 +298,351 @@ clj꞉fantasy-app.core-test꞉> 
 clj꞉fantasy-app.core-test꞉> 
 true
 clj꞉fantasy-app.core-test꞉> 
+(suggest-best-transfer all-players (get all-players 3) (get all-players 4))
+({:id 101, :now-cost 81, :xg 0.15, :xa 0.08, :expected-bonus 3, :element_type 2} {:id 202, :now-cost 65, :xg 0.3, :xa 0.12, :expected-bonus 5, :element_type 4})
+clj꞉fantasy-app.core-test꞉> 
+true
+clj꞉fantasy-app.core-test꞉> 
+; 
+; FAIL Check if the returned players are not the same as selected players. at (c:\Users\Nikola\Desktop\Clojure projekat\fantasy_app\test\fantasy_app\core_test.clj:45)
+; Expected:
+; false
+; Actual:
+; true
+false
+clj꞉fantasy-app.core-test꞉> 
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Connecting ...
+; Reading port file: file:///c%3A/Users/Nikola/Desktop/Clojure%20projekat/fantasy_app/.nrepl-port ...
+; Using host:port localhost:58493 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉fantasy-app.core꞉> 
+"Please see https://calva.io/output/#about-stdout-in-the-repl-window
+about why stdout printed to this file is prepended with `;` to be line comments."
+clj꞉fantasy-app.core꞉> 
+()#'fantasy-app.core-test/all-players
+clj꞉fantasy-app.core-test꞉> 
+#'fantasy-app.core-test/all-players
+clj꞉fantasy-app.core-test꞉> 
+#'fantasy-app.core/suggest-best-transfer
+clj꞉fantasy-app.core꞉> 
+(suggest-best-transfer all-players (get all-players 6) (get all-players 2))
+; Syntax error compiling at (c:\Users\Nikola\Desktop\Clojure projekat\fantasy_app\.calva\output-window\output.calva-repl:336:1).
+; Unable to resolve symbol: all-players in this context
+clj꞉fantasy-app.core꞉> 
+#'fantasy-app.core-test/all-players
+clj꞉fantasy-app.core-test꞉> 
+({:id 707, :now-cost 85, :xg 0.35, :xa 0.18, :expected-bonus 3, :element_type 4})
+clj꞉fantasy-app.core-test꞉> 
+({:id 707, :now-cost 85, :xg 0.35, :xa 0.18, :expected-bonus 3, :element_type 4} {:id 404, :now-cost 90, :xg 0.4, :xa 0.05, :expected-bonus 3, :element_type 4})
+clj꞉fantasy-app.core-test꞉> 
+({:id 707, :now-cost 85, :xg 0.35, :xa 0.18, :expected-bonus 3, :element_type 4} {:id 404, :now-cost 90, :xg 0.4, :xa 0.05, :expected-bonus 3, :element_type 4})
+clj꞉fantasy-app.core-test꞉> 
+; 
+; FAIL Check if the returned players are not the same as selected players. at (c:\Users\Nikola\Desktop\Clojure projekat\fantasy_app\test\fantasy_app\core_test.clj:45)
+; Expected:
+; true
+; Actual:
+; java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "x" is null
+;   fantasy_app.core$calculate_players_predicted_points.invokeStatic(core.clj:12)
+;   fantasy_app.core$calculate_players_predicted_points.invoke(core.clj:9)
+;   fantasy_app.core$rank_players$fn__159.invoke(core.clj:17)
+;   fantasy_app.core$rank_players.invokeStatic(core.clj:17)
+;   fantasy_app.core$rank_players.invoke(core.clj:14)
+;   fantasy_app.core$suggest_best_transfer.invokeStatic(form-init11622345859649299467.clj:27)
+;   fantasy_app.core$suggest_best_transfer.doInvoke(form-init11622345859649299467.clj:24)
+;   fantasy_app.core_test$eval10002$fn__10003$fn__10004$fn__10005.invoke(form-init11622345859649299467.clj:45)
+;   fantasy_app.core_test$eval10002$fn__10003$fn__10004.invoke(form-init11622345859649299467.clj:44)
+;   fantasy_app.core_test$eval10002$fn__10003.invoke(form-init11622345859649299467.clj:44)
+;   fantasy_app.core_test$eval10002.invokeStatic(form-init11622345859649299467.clj:44)
+;   fantasy_app.core_test$eval10002.invoke(form-init11622345859649299467.clj:44)
+;   nrepl.middleware.interruptible_eval$evaluate$fn__1275$fn__1276.invoke(interruptible_eval.clj:87)
+;   nrepl.middleware.interruptible_eval$evaluate$fn__1275.invoke(interruptible_eval.clj:87)
+;   nrepl.middleware.interruptible_eval$evaluate.invokeStatic(interruptible_eval.clj:84)
+;   nrepl.middleware.interruptible_eval$evaluate.invoke(interruptible_eval.clj:56)
+;   nrepl.middleware.interruptible_eval$interruptible_eval$fn__1308$fn__1312.invoke(interruptible_eval.clj:152)
+;   nrepl.middleware.session$session_exec$main_loop__1378$fn__1382.invoke(session.clj:218)
+;   nrepl.middleware.session$session_exec$main_loop__1378.invoke(session.clj:217)
+false
+clj꞉fantasy-app.core-test꞉> 
+; 
+; FAIL Check if the returned players are not the same as selected players. at (c:\Users\Nikola\Desktop\Clojure projekat\fantasy_app\test\fantasy_app\core_test.clj:45)
+; Expected:
+; true
+; Actual:
+; java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "x" is null
+;   fantasy_app.core$calculate_players_predicted_points.invokeStatic(core.clj:12)
+;   fantasy_app.core$calculate_players_predicted_points.invoke(core.clj:9)
+;   fantasy_app.core$rank_players$fn__159.invoke(core.clj:17)
+;   fantasy_app.core$rank_players.invokeStatic(core.clj:17)
+;   fantasy_app.core$rank_players.invoke(core.clj:14)
+;   fantasy_app.core$suggest_best_transfer.invokeStatic(form-init11622345859649299467.clj:27)
+;   fantasy_app.core$suggest_best_transfer.doInvoke(form-init11622345859649299467.clj:24)
+;   fantasy_app.core_test$eval10015$fn__10016$fn__10017$fn__10018.invoke(form-init11622345859649299467.clj:45)
+;   fantasy_app.core_test$eval10015$fn__10016$fn__10017.invoke(form-init11622345859649299467.clj:44)
+;   fantasy_app.core_test$eval10015$fn__10016.invoke(form-init11622345859649299467.clj:44)
+;   fantasy_app.core_test$eval10015.invokeStatic(form-init11622345859649299467.clj:44)
+;   fantasy_app.core_test$eval10015.invoke(form-init11622345859649299467.clj:44)
+;   nrepl.middleware.interruptible_eval$evaluate$fn__1275$fn__1276.invoke(interruptible_eval.clj:87)
+;   nrepl.middleware.interruptible_eval$evaluate$fn__1275.invoke(interruptible_eval.clj:87)
+;   nrepl.middleware.interruptible_eval$evaluate.invokeStatic(interruptible_eval.clj:84)
+;   nrepl.middleware.interruptible_eval$evaluate.invoke(interruptible_eval.clj:56)
+;   nrepl.middleware.interruptible_eval$interruptible_eval$fn__1308$fn__1312.invoke(interruptible_eval.clj:152)
+;   nrepl.middleware.session$session_exec$main_loop__1378$fn__1382.invoke(session.clj:218)
+;   nrepl.middleware.session$session_exec$main_loop__1378.invoke(session.clj:217)
+false
+clj꞉fantasy-app.core-test꞉> 
+; 
+; FAIL Check if the returned players are not the same as selected players. at (c:\Users\Nikola\Desktop\Clojure projekat\fantasy_app\test\fantasy_app\core_test.clj:45)
+; Expected:
+; true
+; Actual:
+; java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "x" is null
+;   fantasy_app.core$calculate_players_predicted_points.invokeStatic(core.clj:12)
+;   fantasy_app.core$calculate_players_predicted_points.invoke(core.clj:9)
+;   fantasy_app.core$rank_players$fn__159.invoke(core.clj:17)
+;   fantasy_app.core$rank_players.invokeStatic(core.clj:17)
+;   fantasy_app.core$rank_players.invoke(core.clj:14)
+;   fantasy_app.core$suggest_best_transfer.invokeStatic(form-init11622345859649299467.clj:27)
+;   fantasy_app.core$suggest_best_transfer.doInvoke(form-init11622345859649299467.clj:24)
+;   fantasy_app.core_test$eval10028$fn__10029$fn__10030$fn__10031.invoke(form-init11622345859649299467.clj:45)
+;   fantasy_app.core_test$eval10028$fn__10029$fn__10030.invoke(form-init11622345859649299467.clj:44)
+;   fantasy_app.core_test$eval10028$fn__10029.invoke(form-init11622345859649299467.clj:44)
+;   fantasy_app.core_test$eval10028.invokeStatic(form-init11622345859649299467.clj:44)
+;   fantasy_app.core_test$eval10028.invoke(form-init11622345859649299467.clj:44)
+;   nrepl.middleware.interruptible_eval$evaluate$fn__1275$fn__1276.invoke(interruptible_eval.clj:87)
+;   nrepl.middleware.interruptible_eval$evaluate$fn__1275.invoke(interruptible_eval.clj:87)
+;   nrepl.middleware.interruptible_eval$evaluate.invokeStatic(interruptible_eval.clj:84)
+;   nrepl.middleware.interruptible_eval$evaluate.invoke(interruptible_eval.clj:56)
+;   nrepl.middleware.interruptible_eval$interruptible_eval$fn__1308$fn__1312.invoke(interruptible_eval.clj:152)
+;   nrepl.middleware.session$session_exec$main_loop__1378$fn__1382.invoke(session.clj:218)
+;   nrepl.middleware.session$session_exec$main_loop__1378.invoke(session.clj:217)
+false
+clj꞉fantasy-app.core-test꞉> 
+#'fantasy-app.core/suggest-best-transfer
+clj꞉fantasy-app.core꞉> 
+; 
+; FAIL Check if the returned players are not the same as selected players. at (c:\Users\Nikola\Desktop\Clojure projekat\fantasy_app\test\fantasy_app\core_test.clj:45)
+; Expected:
+; true
+; Actual:
+; java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "x" is null
+;   fantasy_app.core$calculate_players_predicted_points.invokeStatic(core.clj:12)
+;   fantasy_app.core$calculate_players_predicted_points.invoke(core.clj:9)
+;   fantasy_app.core$rank_players$fn__159.invoke(core.clj:17)
+;   fantasy_app.core$rank_players.invokeStatic(core.clj:17)
+;   fantasy_app.core$rank_players.invoke(core.clj:14)
+;   fantasy_app.core$suggest_best_transfer.invokeStatic(form-init11622345859649299467.clj:27)
+;   fantasy_app.core$suggest_best_transfer.doInvoke(form-init11622345859649299467.clj:24)
+;   fantasy_app.core_test$eval10065$fn__10066$fn__10067$fn__10068.invoke(form-init11622345859649299467.clj:45)
+;   fantasy_app.core_test$eval10065$fn__10066$fn__10067.invoke(form-init11622345859649299467.clj:44)
+;   fantasy_app.core_test$eval10065$fn__10066.invoke(form-init11622345859649299467.clj:44)
+;   fantasy_app.core_test$eval10065.invokeStatic(form-init11622345859649299467.clj:44)
+;   fantasy_app.core_test$eval10065.invoke(form-init11622345859649299467.clj:44)
+;   nrepl.middleware.interruptible_eval$evaluate$fn__1275$fn__1276.invoke(interruptible_eval.clj:87)
+;   nrepl.middleware.interruptible_eval$evaluate$fn__1275.invoke(interruptible_eval.clj:87)
+;   nrepl.middleware.interruptible_eval$evaluate.invokeStatic(interruptible_eval.clj:84)
+;   nrepl.middleware.interruptible_eval$evaluate.invoke(interruptible_eval.clj:56)
+;   nrepl.middleware.interruptible_eval$interruptible_eval$fn__1308$fn__1312.invoke(interruptible_eval.clj:152)
+;   nrepl.middleware.session$session_exec$main_loop__1378$fn__1382.invoke(session.clj:218)
+;   nrepl.middleware.session$session_exec$main_loop__1378.invoke(session.clj:217)
+false
+clj꞉fantasy-app.core-test꞉> 
+#'fantasy-app.core/suggest-best-transfer
+clj꞉fantasy-app.core꞉> 
+(suggest-best-transfer all-players (get all-players 6) (get all-players 2))
+; Syntax error compiling at (c:\Users\Nikola\Desktop\Clojure projekat\fantasy_app\.calva\output-window\output.calva-repl:460:1).
+; Unable to resolve symbol: all-players in this context
+clj꞉fantasy-app.core꞉> 
+#'fantasy-app.core-test/all-players
+clj꞉fantasy-app.core-test꞉> 
+(suggest-best-transfer all-players (get all-players 6) (get all-players 2))
+({:id 707, :now-cost 85, :xg 0.35, :xa 0.18, :expected-bonus 3, :element_type 4} {:id 404, :now-cost 90, :xg 0.4, :xa 0.05, :expected-bonus 3, :element_type 4})
+clj꞉fantasy-app.core-test꞉> 
+#'fantasy-app.core/suggest-best-transfer
+clj꞉fantasy-app.core꞉> 
+#'fantasy-app.core/suggest-best-transfer
+clj꞉fantasy-app.core꞉> 
+; 
+; FAIL Check if the returned players are not the same as selected players. at (c:\Users\Nikola\Desktop\Clojure projekat\fantasy_app\test\fantasy_app\core_test.clj:45)
+; Expected:
+; true
+; Actual:
+; java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "x" is null
+;   fantasy_app.core$calculate_players_predicted_points.invokeStatic(core.clj:12)
+;   fantasy_app.core$calculate_players_predicted_points.invoke(core.clj:9)
+;   fantasy_app.core$rank_players$fn__159.invoke(core.clj:17)
+;   fantasy_app.core$rank_players.invokeStatic(core.clj:17)
+;   fantasy_app.core$rank_players.invoke(core.clj:14)
+;   fantasy_app.core$suggest_best_transfer.invokeStatic(form-init11622345859649299467.clj:27)
+;   fantasy_app.core$suggest_best_transfer.doInvoke(form-init11622345859649299467.clj:24)
+;   fantasy_app.core_test$eval10137$fn__10138$fn__10139$fn__10140.invoke(form-init11622345859649299467.clj:45)
+;   fantasy_app.core_test$eval10137$fn__10138$fn__10139.invoke(form-init11622345859649299467.clj:44)
+;   fantasy_app.core_test$eval10137$fn__10138.invoke(form-init11622345859649299467.clj:44)
+;   fantasy_app.core_test$eval10137.invokeStatic(form-init11622345859649299467.clj:44)
+;   fantasy_app.core_test$eval10137.invoke(form-init11622345859649299467.clj:44)
+;   nrepl.middleware.interruptible_eval$evaluate$fn__1275$fn__1276.invoke(interruptible_eval.clj:87)
+;   nrepl.middleware.interruptible_eval$evaluate$fn__1275.invoke(interruptible_eval.clj:87)
+;   nrepl.middleware.interruptible_eval$evaluate.invokeStatic(interruptible_eval.clj:84)
+;   nrepl.middleware.interruptible_eval$evaluate.invoke(interruptible_eval.clj:56)
+;   nrepl.middleware.interruptible_eval$interruptible_eval$fn__1308$fn__1312.invoke(interruptible_eval.clj:152)
+;   nrepl.middleware.session$session_exec$main_loop__1378$fn__1382.invoke(session.clj:218)
+;   nrepl.middleware.session$session_exec$main_loop__1378.invoke(session.clj:217)
+false
+clj꞉fantasy-app.core-test꞉> 
+#'fantasy-app.core/suggest-best-transfer
+clj꞉fantasy-app.core꞉> 
+; 
+; FAIL Check if the returned players are not the same as selected players. at (c:\Users\Nikola\Desktop\Clojure projekat\fantasy_app\test\fantasy_app\core_test.clj:45)
+; Expected:
+; true
+; Actual:
+; java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "x" is null
+;   fantasy_app.core$calculate_players_predicted_points.invokeStatic(core.clj:12)
+;   fantasy_app.core$calculate_players_predicted_points.invoke(core.clj:9)
+;   fantasy_app.core$rank_players$fn__159.invoke(core.clj:17)
+;   fantasy_app.core$rank_players.invokeStatic(core.clj:17)
+;   fantasy_app.core$rank_players.invoke(core.clj:14)
+;   fantasy_app.core$suggest_best_transfer.invokeStatic(form-init11622345859649299467.clj:27)
+;   fantasy_app.core$suggest_best_transfer.doInvoke(form-init11622345859649299467.clj:24)
+;   fantasy_app.core_test$eval10176$fn__10177$fn__10178$fn__10179.invoke(form-init11622345859649299467.clj:45)
+;   fantasy_app.core_test$eval10176$fn__10177$fn__10178.invoke(form-init11622345859649299467.clj:44)
+;   fantasy_app.core_test$eval10176$fn__10177.invoke(form-init11622345859649299467.clj:44)
+;   fantasy_app.core_test$eval10176.invokeStatic(form-init11622345859649299467.clj:44)
+;   fantasy_app.core_test$eval10176.invoke(form-init11622345859649299467.clj:44)
+;   nrepl.middleware.interruptible_eval$evaluate$fn__1275$fn__1276.invoke(interruptible_eval.clj:87)
+;   nrepl.middleware.interruptible_eval$evaluate$fn__1275.invoke(interruptible_eval.clj:87)
+;   nrepl.middleware.interruptible_eval$evaluate.invokeStatic(interruptible_eval.clj:84)
+;   nrepl.middleware.interruptible_eval$evaluate.invoke(interruptible_eval.clj:56)
+;   nrepl.middleware.interruptible_eval$interruptible_eval$fn__1308$fn__1312.invoke(interruptible_eval.clj:152)
+;   nrepl.middleware.session$session_exec$main_loop__1378$fn__1382.invoke(session.clj:218)
+;   nrepl.middleware.session$session_exec$main_loop__1378.invoke(session.clj:217)
+false
+clj꞉fantasy-app.core-test꞉> 
+(suggest-best-transfer all-players (get all-players 3) (get all-players 2))
+({:id 404, :now-cost 90, :xg 0.4, :xa 0.05, :expected-bonus 3, :element_type 4} {:id 202, :now-cost 65, :xg 0.3, :xa 0.12, :expected-bonus 3, :element_type 4})
+clj꞉fantasy-app.core-test꞉> 
+({:id 707, :now-cost 85, :xg 0.35, :xa 0.18, :expected-bonus 3, :element_type 4} {:id 202, :now-cost 65, :xg 0.3, :xa 0.12, :expected-bonus 3, :element_type 4})
+clj꞉fantasy-app.core-test꞉> 
+; 
+; FAIL Check if the returned players are not the same as selected players. at (c:\Users\Nikola\Desktop\Clojure projekat\fantasy_app\test\fantasy_app\core_test.clj:45)
+; Expected:
+; true
+; Actual:
+; java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "x" is null
+;   fantasy_app.core$calculate_players_predicted_points.invokeStatic(core.clj:12)
+;   fantasy_app.core$calculate_players_predicted_points.invoke(core.clj:9)
+;   fantasy_app.core$rank_players$fn__159.invoke(core.clj:17)
+;   fantasy_app.core$rank_players.invokeStatic(core.clj:17)
+;   fantasy_app.core$rank_players.invoke(core.clj:14)
+;   fantasy_app.core$suggest_best_transfer.invokeStatic(form-init11622345859649299467.clj:27)
+;   fantasy_app.core$suggest_best_transfer.doInvoke(form-init11622345859649299467.clj:24)
+;   fantasy_app.core_test$eval10193$fn__10194$fn__10195$fn__10196.invoke(form-init11622345859649299467.clj:45)
+;   fantasy_app.core_test$eval10193$fn__10194$fn__10195.invoke(form-init11622345859649299467.clj:44)
+;   fantasy_app.core_test$eval10193$fn__10194.invoke(form-init11622345859649299467.clj:44)
+;   fantasy_app.core_test$eval10193.invokeStatic(form-init11622345859649299467.clj:44)
+;   fantasy_app.core_test$eval10193.invoke(form-init11622345859649299467.clj:44)
+;   nrepl.middleware.interruptible_eval$evaluate$fn__1275$fn__1276.invoke(interruptible_eval.clj:87)
+;   nrepl.middleware.interruptible_eval$evaluate$fn__1275.invoke(interruptible_eval.clj:87)
+;   nrepl.middleware.interruptible_eval$evaluate.invokeStatic(interruptible_eval.clj:84)
+;   nrepl.middleware.interruptible_eval$evaluate.invoke(interruptible_eval.clj:56)
+;   nrepl.middleware.interruptible_eval$interruptible_eval$fn__1308$fn__1312.invoke(interruptible_eval.clj:152)
+;   nrepl.middleware.session$session_exec$main_loop__1378$fn__1382.invoke(session.clj:218)
+;   nrepl.middleware.session$session_exec$main_loop__1378.invoke(session.clj:217)
+false
+clj꞉fantasy-app.core-test꞉> 
+(get all-players 6)
+{:id 707, :now-cost 85, :xg 0.35, :xa 0.18, :expected-bonus 3, :element_type 4}
+clj꞉fantasy-app.core-test꞉> 
+; 
+; FAIL Check if the returned players are not the same as selected players. at (c:\Users\Nikola\Desktop\Clojure projekat\fantasy_app\test\fantasy_app\core_test.clj:45)
+; Expected:
+; true
+; Actual:
+; java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "x" is null
+;   fantasy_app.core$calculate_players_predicted_points.invokeStatic(core.clj:12)
+;   fantasy_app.core$calculate_players_predicted_points.invoke(core.clj:9)
+;   fantasy_app.core$rank_players$fn__159.invoke(core.clj:17)
+;   fantasy_app.core$rank_players.invokeStatic(core.clj:17)
+;   fantasy_app.core$rank_players.invoke(core.clj:14)
+;   fantasy_app.core$suggest_best_transfer.invokeStatic(form-init11622345859649299467.clj:27)
+;   fantasy_app.core$suggest_best_transfer.doInvoke(form-init11622345859649299467.clj:24)
+;   fantasy_app.core_test$eval10208$fn__10209$fn__10210$fn__10211.invoke(form-init11622345859649299467.clj:45)
+;   fantasy_app.core_test$eval10208$fn__10209$fn__10210.invoke(form-init11622345859649299467.clj:44)
+;   fantasy_app.core_test$eval10208$fn__10209.invoke(form-init11622345859649299467.clj:44)
+;   fantasy_app.core_test$eval10208.invokeStatic(form-init11622345859649299467.clj:44)
+;   fantasy_app.core_test$eval10208.invoke(form-init11622345859649299467.clj:44)
+;   nrepl.middleware.interruptible_eval$evaluate$fn__1275$fn__1276.invoke(interruptible_eval.clj:87)
+;   nrepl.middleware.interruptible_eval$evaluate$fn__1275.invoke(interruptible_eval.clj:87)
+;   nrepl.middleware.interruptible_eval$evaluate.invokeStatic(interruptible_eval.clj:84)
+;   nrepl.middleware.interruptible_eval$evaluate.invoke(interruptible_eval.clj:56)
+;   nrepl.middleware.interruptible_eval$interruptible_eval$fn__1308$fn__1312.invoke(interruptible_eval.clj:152)
+;   nrepl.middleware.session$session_exec$main_loop__1378$fn__1382.invoke(session.clj:218)
+;   nrepl.middleware.session$session_exec$main_loop__1378.invoke(session.clj:217)
+false
+clj꞉fantasy-app.core-test꞉> 
+; 
+; FAIL Check if the returned players are not the same as selected players. at (c:\Users\Nikola\Desktop\Clojure projekat\fantasy_app\test\fantasy_app\core_test.clj:45)
+; Expected:
+; false
+; Actual:
+; java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "x" is null
+;   fantasy_app.core$calculate_players_predicted_points.invokeStatic(core.clj:12)
+;   fantasy_app.core$calculate_players_predicted_points.invoke(core.clj:9)
+;   fantasy_app.core$rank_players$fn__159.invoke(core.clj:17)
+;   fantasy_app.core$rank_players.invokeStatic(core.clj:17)
+;   fantasy_app.core$rank_players.invoke(core.clj:14)
+;   fantasy_app.core$suggest_best_transfer.invokeStatic(form-init11622345859649299467.clj:27)
+;   fantasy_app.core$suggest_best_transfer.doInvoke(form-init11622345859649299467.clj:24)
+;   fantasy_app.core_test$eval10219$fn__10220$fn__10221$fn__10222.invoke(form-init11622345859649299467.clj:45)
+;   fantasy_app.core_test$eval10219$fn__10220$fn__10221.invoke(form-init11622345859649299467.clj:44)
+;   fantasy_app.core_test$eval10219$fn__10220.invoke(form-init11622345859649299467.clj:44)
+;   fantasy_app.core_test$eval10219.invokeStatic(form-init11622345859649299467.clj:44)
+;   fantasy_app.core_test$eval10219.invoke(form-init11622345859649299467.clj:44)
+;   nrepl.middleware.interruptible_eval$evaluate$fn__1275$fn__1276.invoke(interruptible_eval.clj:87)
+;   nrepl.middleware.interruptible_eval$evaluate$fn__1275.invoke(interruptible_eval.clj:87)
+;   nrepl.middleware.interruptible_eval$evaluate.invokeStatic(interruptible_eval.clj:84)
+;   nrepl.middleware.interruptible_eval$evaluate.invoke(interruptible_eval.clj:56)
+;   nrepl.middleware.interruptible_eval$interruptible_eval$fn__1308$fn__1312.invoke(interruptible_eval.clj:152)
+;   nrepl.middleware.session$session_exec$main_loop__1378$fn__1382.invoke(session.clj:218)
+;   nrepl.middleware.session$session_exec$main_loop__1378.invoke(session.clj:217)
+false
+clj꞉fantasy-app.core-test꞉> 
+; 
+; FAIL Check if the returned players are not the same as selected players. at (c:\Users\Nikola\Desktop\Clojure projekat\fantasy_app\test\fantasy_app\core_test.clj:45)
+; Expected:
+; true
+; Actual:
+; java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "x" is null
+;   fantasy_app.core$calculate_players_predicted_points.invokeStatic(core.clj:12)
+;   fantasy_app.core$calculate_players_predicted_points.invoke(core.clj:9)
+;   fantasy_app.core$rank_players$fn__159.invoke(core.clj:17)
+;   fantasy_app.core$rank_players.invokeStatic(core.clj:17)
+;   fantasy_app.core$rank_players.invoke(core.clj:14)
+;   fantasy_app.core$suggest_best_transfer.invokeStatic(form-init11622345859649299467.clj:27)
+;   fantasy_app.core$suggest_best_transfer.doInvoke(form-init11622345859649299467.clj:24)
+;   fantasy_app.core_test$eval10230$fn__10231$fn__10232$fn__10233.invoke(form-init11622345859649299467.clj:45)
+;   fantasy_app.core_test$eval10230$fn__10231$fn__10232.invoke(form-init11622345859649299467.clj:44)
+;   fantasy_app.core_test$eval10230$fn__10231.invoke(form-init11622345859649299467.clj:44)
+;   fantasy_app.core_test$eval10230.invokeStatic(form-init11622345859649299467.clj:44)
+;   fantasy_app.core_test$eval10230.invoke(form-init11622345859649299467.clj:44)
+;   nrepl.middleware.interruptible_eval$evaluate$fn__1275$fn__1276.invoke(interruptible_eval.clj:87)
+;   nrepl.middleware.interruptible_eval$evaluate$fn__1275.invoke(interruptible_eval.clj:87)
+;   nrepl.middleware.interruptible_eval$evaluate.invokeStatic(interruptible_eval.clj:84)
+;   nrepl.middleware.interruptible_eval$evaluate.invoke(interruptible_eval.clj:56)
+;   nrepl.middleware.interruptible_eval$interruptible_eval$fn__1308$fn__1312.invoke(interruptible_eval.clj:152)
+;   nrepl.middleware.session$session_exec$main_loop__1378$fn__1382.invoke(session.clj:218)
+;   nrepl.middleware.session$session_exec$main_loop__1378.invoke(session.clj:217)
+false
+clj꞉fantasy-app.core-test꞉> 
+true
+clj꞉fantasy-app.core-test꞉> 
+true
+clj꞉fantasy-app.core-test꞉> 
