@@ -37,6 +37,10 @@
             (recur (rest remaining) (conj selected-players (first remaining)) new-price)
             (recur (rest remaining) selected-players total-price)))))))
 
+(defn optimal-team
+  "A function that generates best 15 players for a ceratin gameweek based on predicted points"
+  [all-players])
+
 (defn create-optimal-team
   "A function that creates user's otpimal team."
   [team])

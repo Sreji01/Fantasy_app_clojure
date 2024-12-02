@@ -50,6 +50,8 @@
 (fact "Check if there is a return value"
       (create-optimal-team all-players) =not=> nil)
 
+((fact "Check if there is a return value"
+       (optimal-team all-players) =not=> nil))
 
 
 
