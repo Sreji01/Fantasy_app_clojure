@@ -797,3 +797,99 @@ clj꞉fantasy-app.core꞉> 
 "Please see https://calva.io/output/#about-stdout-in-the-repl-window
 about why stdout printed to this file is prepended with `;` to be line comments."
 clj꞉fantasy-app.core꞉> 
+(map :element_type all-players)
+; Syntax error compiling at (c:\Users\Nikola\Desktop\Clojure projekat\fantasy_app\.calva\output-window\output.calva-repl:800:1).
+; Unable to resolve symbol: all-players in this context
+clj꞉fantasy-app.core꞉> 
+; Syntax error reading source at (REPL:25:80).
+; Unmatched delimiter: )
+clj꞉fantasy-app.core-test꞉> 
+; Syntax error reading source at (REPL:25:80).
+; Unmatched delimiter: )
+clj꞉fantasy-app.core-test꞉> 
+; Syntax error reading source at (REPL:25:80).
+; Unmatched delimiter: )
+clj꞉fantasy-app.core-test꞉> 
+#'fantasy-app.core-test/all-players
+clj꞉fantasy-app.core-test꞉> 
+(2 4 3 4 3 3 4 2 4 2 3 4 2 4 3)
+clj꞉fantasy-app.core-test꞉> 
+; 
+; FAIL Check if the selected players positions are the same as returned players positions. at (c:\Users\Nikola\Desktop\Clojure projekat\fantasy_app\test\fantasy_app\core_test.clj:57)
+; Expected:
+; true
+; Actual:
+; false
+false
+clj꞉fantasy-app.core-test꞉> 
+(map :element_type (list (get all-players 0) (get all-players 1)))
+(2 4)
+clj꞉fantasy-app.core-test꞉> 
+(map :element_type (suggest-best-transfer all-players 50
+                                          (get all-players 0) (get all-players 1)))
+(4 4)
+clj꞉fantasy-app.core-test꞉> 
+; Syntax error macroexpanding clojure.core/let at (c:\Users\Nikola\Desktop\Clojure projekat\fantasy_app\src\fantasy_app\core.clj:36:9).
+; [new-price (+ total-price (:now-cost (first remaining))) [new-position (:element_type (first remaining))]] - failed: even-number-of-forms? at: [:bindings] spec: :clojure.core.specs.alpha/bindings
+clj꞉fantasy-app.core꞉> 
+#'fantasy-app.core/suggest-best-transfer
+clj꞉fantasy-app.core꞉> 
+; 
+; FAIL Check if the selected players positions are the same as returned players positions. at (c:\Users\Nikola\Desktop\Clojure projekat\fantasy_app\test\fantasy_app\core_test.clj:57)
+; Expected:
+; true
+; Actual:
+; false
+false
+clj꞉fantasy-app.core-test꞉> 
+#'fantasy-app.core/suggest-best-transfer
+clj꞉fantasy-app.core꞉> 
+#'fantasy-app.core/suggest-best-transfer
+clj꞉fantasy-app.core꞉> 
+(map :element_type (list (get all-players 0) (get all-players 1))) 
+; Syntax error compiling at (c:\Users\Nikola\Desktop\Clojure projekat\fantasy_app\.calva\output-window\output.calva-repl:849:26).
+; Unable to resolve symbol: all-players in this context
+clj꞉fantasy-app.core꞉> 
+#'fantasy-app.core-test/all-players
+clj꞉fantasy-app.core-test꞉> 
+; 
+; FAIL Check if the selected players positions are the same as returned players positions. at (c:\Users\Nikola\Desktop\Clojure projekat\fantasy_app\test\fantasy_app\core_test.clj:57)
+; Expected:
+; true
+; Actual:
+; false
+false
+clj꞉fantasy-app.core-test꞉> 
+(map :element_type (list (get all-players 0) (get all-players 1))) 
+(2 4)
+clj꞉fantasy-app.core-test꞉> 
+(map :element_type (suggest-best-transfer all-players 50
+                                          (get all-players 0) (get all-players 1)
+{:id 202, :now-cost 65, :xg 0.3, :xa 0.12, :expected-bonus 3, :element_type 4}
+clj꞉fantasy-app.core-test꞉> 
+(suggest-best-transfer all-players 50
+                       (get all-players 0) (get all-players 1))
+[{:id 1404, :now-cost 92, :xg 0.45, :xa 0.1, :expected-bonus 5, :element_type 4} {:id 808, :now-cost 55, :xg 0.12, :xa 0.25, :expected-bonus 2, :element_type 2}]
+clj꞉fantasy-app.core-test꞉> 
+ (map :element_type (suggest-best-transfer all-players 50
+                                          (get all-players 0) (get all-players 1)))
+(4 2)
+clj꞉fantasy-app.core-test꞉> 
+ (set (map :element_type
+          (suggest-best-transfer all-players 50
+                                 (get all-players 0) (get all-players 1))))
+#{4 2}
+clj꞉fantasy-app.core-test꞉> 
+(set (map :element_type (list (get all-players 0) (get all-players 1))))
+#{4 2}
+clj꞉fantasy-app.core-test꞉> 
+true
+clj꞉fantasy-app.core-test꞉> 
+(suggest-best-transfer all-players 50
+                       (get all-players 2) (get all-players 8))
+[{:id 1404, :now-cost 92, :xg 0.45, :xa 0.1, :expected-bonus 5, :element_type 4}]
+clj꞉fantasy-app.core-test꞉> 
+[{:id 1404, :now-cost 92, :xg 0.45, :xa 0.1, :expected-bonus 5, :element_type 4} {:id 1505, :now-cost 72, :xg 0.3, :xa 0.18, :expected-bonus 3, :element_type 3}]
+clj꞉fantasy-app.core-test꞉> 
+true
+clj꞉fantasy-app.core-test꞉> 

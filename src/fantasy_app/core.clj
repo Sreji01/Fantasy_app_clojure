@@ -28,14 +28,17 @@
         budget (+ money-in-bank (reduce + (map :now-cost transfered-out)))]
     (loop [remaining potential-transfers
            selected-players []
-           total-price 0]
+           total-price 0
+           transfered-out-positions (map :element_type transfered-out)]
       (if (or (empty? remaining)
               (= (count selected-players) (count transfered-out)))
         selected-players
-        (let [new-price (+ total-price (:now-cost (first remaining)))]
-          (if (<= new-price budget)
-            (recur (rest remaining) (conj selected-players (first remaining)) new-price)
-            (recur (rest remaining) selected-players total-price)))))))
+        (let [new-price (+ total-price (:now-cost (first remaining)))
+              new-position (:element_type (first remaining))]
+          (if (and (<= new-price budget)
+                   (some #(= % new-position) transfered-out-positions))
+            (recur (rest remaining) (conj selected-players (first remaining)) new-price (remove #(= % new-position) transfered-out-positions))
+            (recur (rest remaining) selected-players total-price transfered-out-positions)))))))
 
 (defn optimal-team
   "A function that generates best 15 players for a ceratin gameweek based on predicted points"
