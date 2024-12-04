@@ -16,13 +16,15 @@
    {:id 606 :now-cost 60 :xg 0.20 :xa 0.10 :expected-bonus 1 :element_type 3}
    {:id 707 :now-cost 85 :xg 0.35 :xa 0.18 :expected-bonus 3 :element_type 4}
    {:id 808 :now-cost 55 :xg 0.12 :xa 0.25 :expected-bonus 2 :element_type 2}
-   {:id 909 :now-cost 95 :xg 0.50 :xa 0.22 :expected-bonus 4 :element_type 4} 
+   {:id 909 :now-cost 95 :xg 0.50 :xa 0.22 :expected-bonus 3 :element_type 4}
    {:id 1001 :now-cost 58 :xg 0.08 :xa 0.18 :expected-bonus 2 :element_type 2}
-   {:id 1101 :now-cost 68 :xg 0.22 :xa 0.11 :expected-bonus 3 :element_type 3} 
-   {:id 1202 :now-cost 80 :xg 0.38 :xa 0.14 :expected-bonus 4 :element_type 4}
+   {:id 1101 :now-cost 68 :xg 0.22 :xa 0.11 :expected-bonus 3 :element_type 3}
+   {:id 1202 :now-cost 80 :xg 0.38 :xa 0.14 :expected-bonus 3 :element_type 4}
    {:id 1303 :now-cost 64 :xg 0.10 :xa 0.05 :expected-bonus 1 :element_type 2}
-   {:id 1404 :now-cost 92 :xg 0.45 :xa 0.10 :expected-bonus 5 :element_type 4}
-   {:id 1505 :now-cost 72 :xg 0.30 :xa 0.18 :expected-bonus 3 :element_type 3}])
+   {:id 1404 :now-cost 92 :xg 0.45 :xa 0.10 :expected-bonus 3 :element_type 4}
+   {:id 1505 :now-cost 72 :xg 0.30 :xa 0.18 :expected-bonus 3 :element_type 3}
+   {:id 1606 :now-cost 78 :xg 0.28 :xa 0.15 :expected-bonus 2 :element_type 4}
+   {:id 1707 :now-cost 62 :xg 0.18 :xa 0.20 :expected-bonus 3 :element_type 2}])
 
 (def test-player {:id 909 :now-cost 81 :xg 2 :xa 1 :expected-bonus 1 :element_type 2})
 
@@ -60,10 +62,14 @@
                                                         (get all-players 2) (get all-players 7))))) => true)
 
 (fact "Check if there is a return value"
+       (optimal-team all-players) =not=> nil)
+
+(fact "Check if the value of optimal team is below 100"
+      (<= (reduce + (map :now-cost (optimal-team all-players))) 100) => true)
+
+(fact "Check if there is a return value"
       (create-optimal-team all-players) =not=> nil)
 
-((fact "Check if there is a return value"
-       (optimal-team all-players) =not=> nil))
 
 
 

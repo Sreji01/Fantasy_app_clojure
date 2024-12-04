@@ -42,9 +42,11 @@
 
 (defn optimal-team
   "A function that generates best 15 players for a ceratin gameweek based on predicted points"
-  [all-players])
+  [all-players]
+  (let [ranked-players (rank-players all-players)]
+    (take 15 ranked-players)))
 
 (defn create-optimal-team
   "A function that creates user's otpimal team."
-  [team])
+  [team]))
 
