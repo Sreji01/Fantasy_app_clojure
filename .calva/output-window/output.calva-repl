@@ -984,3 +984,9 @@ clj꞉fantasy-app.core꞉> 
 ; false
 false
 clj꞉fantasy-app.core-test꞉> 
+#'fantasy-app.core/optimal-team
+clj꞉fantasy-app.core꞉> 
+true
+clj꞉fantasy-app.core-test꞉> 
+true
+clj꞉fantasy-app.core-test꞉> 

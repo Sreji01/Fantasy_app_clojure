@@ -44,7 +44,16 @@
   "A function that generates best 15 players for a ceratin gameweek based on predicted points"
   [all-players]
   (let [ranked-players (rank-players all-players)]
-    (take 15 ranked-players)))
+    (loop [remaining ranked-players
+           selected-players []
+           total-price 0]
+      (if (or (empty? remaining) (= (count selected-players) 15))
+        selected-players
+        (let [new-price (:now-cost (first remaining))
+              new-position (:element_type (first remaining))]
+          (if (> (+ total-price new-price) 100)
+            (recur (rest remaining) selected-players total-price)
+            (recur (rest remaining) (conj selected-players (first remaining)) (+ total-price new-price))))))))
 
 (defn create-optimal-team
   "A function that creates user's otpimal team."
