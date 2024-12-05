@@ -990,3 +990,94 @@ true
 clj꞉fantasy-app.core-test꞉> 
 true
 clj꞉fantasy-app.core-test꞉> 
+#'fantasy-app.core/optimal-team
+clj꞉fantasy-app.core꞉> 
+true
+clj꞉fantasy-app.core-test꞉> 
+(optimal-team all-players)
+[{:id 909, :now-cost 95, :xg 0.5, :xa 0.22, :expected-bonus 3, :element_type 4}]
+clj꞉fantasy-app.core-test꞉> 
+#'fantasy-app.core-test/all-players
+clj꞉fantasy-app.core-test꞉> 
+(optimal-team all-players)
+[{:id 909, :now-cost 95, :xg 0.5, :xa 0.22, :expected-bonus 3, :element_type 4}]
+clj꞉fantasy-app.core-test꞉> 
+#'fantasy-app.core/optimal-team
+clj꞉fantasy-app.core꞉> 
+; 
+; FAIL Check if the value of optimal team is below 100 at (c:\Users\Nikola\Desktop\Clojure projekat\fantasy_app\test\fantasy_app\core_test.clj:68)
+; Expected:
+; true
+; Actual:
+; false
+false
+clj꞉fantasy-app.core-test꞉> 
+[{:id 909, :now-cost 95, :xg 0.5, :xa 0.22, :expected-bonus 3, :element_type 4} {:id 1404, :now-cost 92, :xg 0.45, :xa 0.1, :expected-bonus 3, :element_type 4} {:id 707, :now-cost 85, :xg 0.35, :xa 0.18, :expected-bonus 3, :element_type 4} {:id 1202, :now-cost 80, :xg 0.38, :xa 0.14, :expected-bonus 3, :element_type 4} {:id 404, :now-cost 90, :xg 0.4, :xa 0.05, :expected-bonus 3, :element_type 4} {:id 1505, :now-cost 72, :xg 0.3, :xa 0.18, :expected-bonus 3, :element_type 3} {:id 202, :now-cost 65, :xg 0.3, :xa 0.12, :expected-bonus 3, :element_type 4} {:id 1707, :now-cost 62, :xg 0.18, :xa 0.2, :expected-bonus 3, :element_type 2} {:id 1101, :now-cost 68, :xg 0.22, :xa 0.11, :expected-bonus 3, :element_type 3} {:id 1606, :now-cost 78, :xg 0.28, :xa 0.15, :expected-bonus 2, :element_type 4} {:id 505, :now-cost 75, :xg 0.25, :xa 0.15, :expected-bonus 2, :element_type 3} {:id 808, :now-cost 55, :xg 0.12, :xa 0.25, :expected-bonus 2, :element_type 2} {:id 1001, :now-cost 58, :xg 0.08, :xa 0.18, :expected-bonus 2, :element_type 2}]
+clj꞉fantasy-app.core-test꞉> 
+(reduce + (map :now-cost (optimal-team all-players)))
+975
+clj꞉fantasy-app.core-test꞉> 
+true
+clj꞉fantasy-app.core-test꞉> 
+; Syntax error compiling at (c:\Users\Nikola\Desktop\Clojure projekat\fantasy_app\src\fantasy_app\core.clj:13:18).
+; No such namespace: client
+clj꞉fantasy-app.core꞉> 
+; Syntax error compiling at (c:\Users\Nikola\Desktop\Clojure projekat\fantasy_app\src\fantasy_app\core.clj:13:18).
+; No such namespace: client
+clj꞉fantasy-app.core꞉> 
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Connecting ...
+; Reading port file: file:///c%3A/Users/Nikola/Desktop/Clojure%20projekat/fantasy_app/.nrepl-port ...
+; Using host:port localhost:65075 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉fantasy-app.core꞉> 
+"Please see https://calva.io/output/#about-stdout-in-the-repl-window
+about why stdout printed to this file is prepended with `;` to be line comments."
+clj꞉fantasy-app.core꞉> 
+; Syntax error compiling at (c:\Users\Nikola\Desktop\Clojure projekat\fantasy_app\src\fantasy_app\core.clj:13:18).
+; No such namespace: client
+clj꞉fantasy-app.core꞉> 
+; Syntax error compiling at (c:\Users\Nikola\Desktop\Clojure projekat\fantasy_app\src\fantasy_app\core.clj:13:18).
+; No such namespace: client
+clj꞉fantasy-app.core꞉> 
+; Syntax error compiling at (c:\Users\Nikola\Desktop\Clojure projekat\fantasy_app\src\fantasy_app\core.clj:13:18).
+; No such namespace: client
+clj꞉fantasy-app.core꞉> 
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Connecting ...
+; Reading port file: file:///c%3A/Users/Nikola/Desktop/Clojure%20projekat/fantasy_app/.nrepl-port ...
+; Using host:port localhost:50058 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉fantasy-app.core꞉> 
+"Please see https://calva.io/output/#about-stdout-in-the-repl-window
+about why stdout printed to this file is prepended with `;` to be line comments."
+clj꞉fantasy-app.core꞉> 
+#'fantasy-app.core/fetch-player-metrics
+clj꞉fantasy-app.core꞉> 
+#'fantasy-app.core/fetch-player-metrics
+clj꞉fantasy-app.core꞉> 
+#'fantasy-app.core/calculate-players-predicted-points
+clj꞉fantasy-app.core꞉> 
+#'fantasy-app.core/rank-players
+clj꞉fantasy-app.core꞉> 
+(take 10 (rank-players (fetch-player-metrics)))
+; Execution error (IllegalArgumentException) at fantasy-app.core/rank-players (form-init8554191055309074813.clj:52).
+; Don't know how to create ISeq from: fantasy_app.core$fetch_player_metrics
+clj꞉fantasy-app.core꞉> 
+; Execution error (NullPointerException) at fantasy-app.core/calculate-players-predicted-points (form-init8554191055309074813.clj:47).
+; Cannot invoke "Object.getClass()" because "x" is null
+clj꞉fantasy-app.core꞉> 

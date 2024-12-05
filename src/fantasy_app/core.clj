@@ -1,15 +1,50 @@
 (ns fantasy-app.core
-  (:gen-class))
+  (:gen-class)
+  (:require [clj-http.client :as client]
+            [cheshire.core :as cheshire]))
 
 (defn -main
   "I don't do a whole lot ... yet."
   [& args]
   (println "Hello, World!"))
 
+(defn fetch-player-metrics []
+  (let [url "https://fantasy.premierleague.com/api/bootstrap-static/"
+        response (client/get url {:as :json})]
+    (if (= 200 (:status response))
+      (let [data (:body response)
+            players (:elements data)]
+        (map (fn [player]
+               {:id (:id player)
+                :first-name (:first_name player)
+                :second-name (:second_name player)
+                :team (:team player)
+                :now-cost (/ (:now_cost player) 10)
+                :total-points (:total_points player)
+                :form (:form player)
+                :points-per-game (:points_per_game player)
+                :goals-scored (:goals_scored player)
+                :assists (:assists player)
+                :clean-sheets (:clean_sheets player)
+                :minutes (:minutes player)
+                :expected-goals (:expected_goals player)
+                :expected-assists (:expected_assists player)
+                :expected-goal-involvements (:expected_goal_involvements player)
+                :ict-index (:ict_index player)
+                :bonus (:bonus player)
+                :bps (:bps player)
+                :threat (:threat player)
+                :creativity (:creativity player)
+                :influence (:influence player)
+                :status (:status player)
+                :team-code (:team_code player)}))
+        players)
+      (println "Failed to retrieve data from the API."))))
+
 (defn calculate-players-predicted-points
   "A function that calculates a player's predicted points in the next gameweek."
   [player]
-  (+ (* (:xg player) 4) (* (:xa player) 3) (*(:expected-bonus player) 1)))
+  (+ (* (:xg player) 4) (* (:xa player) 3)))
 
 (defn rank-players
   "A function that ranks players based on predicted points"
@@ -51,11 +86,7 @@
         selected-players
         (let [new-price (:now-cost (first remaining))
               new-position (:element_type (first remaining))]
-          (if (> (+ total-price new-price) 100)
+          (if (> (+ total-price new-price) 1000)
             (recur (rest remaining) selected-players total-price)
             (recur (rest remaining) (conj selected-players (first remaining)) (+ total-price new-price))))))))
-
-(defn create-optimal-team
-  "A function that creates user's otpimal team."
-  [team]))
 

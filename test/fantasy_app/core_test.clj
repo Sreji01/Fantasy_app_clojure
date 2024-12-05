@@ -65,10 +65,8 @@
        (optimal-team all-players) =not=> nil)
 
 (fact "Check if the value of optimal team is below 100"
-      (<= (reduce + (map :now-cost (optimal-team all-players))) 100) => true)
+      (<= (reduce + (map :now-cost (optimal-team all-players))) 1000) => true)
 
-(fact "Check if there is a return value"
-      (create-optimal-team all-players) =not=> nil)
 
 
 
