@@ -1,8 +1,8 @@
 (ns fantasy-app.core
   (:gen-class)
-  (:require [clj-http.client :as client]
-            [clojure.tools.logging :as log]
-            [Quartzite.core :as quartz]))
+  (:require [clj-http.client :as client]))
+
+(def players (atom []))
 
 (defn fetch-player-metrics []
   (let [url "https://fantasy.premierleague.com/api/bootstrap-static/"
@@ -20,7 +20,7 @@
                                       :form (:form player)
                                       :expected-points (:ep_next player)})
                                    players)]
-        player-statistics)
+        (reset! players player-statistics))
       (println "Failed to retrieve data from the API."))))
 
 (defn scheduled-task []
@@ -28,19 +28,9 @@
   (fetch-player-metrics))
 
 (defn -main
+  "I don't do a whole lot ... yet."
   [& args]
-  (let [scheduler (quartz/scheduler)]
-    (quartz/start! scheduler)
-    (quartz/schedule! scheduler
-                      (quartz/job
-                       (quartz/job-name "fetch-player-job")
-                       (quartz/with-identity "fetch-player-job" "group1")
-                       (quartz/with-schedule
-                         (quartz/simple-schedule
-                          :repeat-count -1
-                          :repeat-interval (* 24 60 60 1000)
-                          :start-time (java.util.Date. (+ (.getTime (java.util.Date.)) (* 1000 60 60 5)))))))
-    (log/info "Scheduler started.")))
+  (println "Hello, World!"))
 
       
 (defn calculate-players-predicted-points
