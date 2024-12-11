@@ -1,12 +1,8 @@
 (ns fantasy-app.core
   (:gen-class)
   (:require [clj-http.client :as client]
-            [cheshire.core :as cheshire]))
-
-(defn -main
-  "I don't do a whole lot ... yet."
-  [& args]
-  (println "Hello, World!"))
+            [clojure.tools.logging :as log]
+            [Quartzite.core :as quartz]))
 
 (defn fetch-player-metrics []
   (let [url "https://fantasy.premierleague.com/api/bootstrap-static/"
@@ -19,36 +15,39 @@
                                       :first-name (:first_name player)
                                       :second-name (:second_name player)
                                       :team (:team player)
-                                      :now-cost (/ (:now_cost player) 10)
+                                      :now-cost (/ (:now_cost player) 10.0)
                                       :total-points (:total_points player)
                                       :form (:form player)
-                                      :points-per-game (:points_per_game player)
-                                      :goals-scored (:goals_scored player)
-                                      :assists (:assists player)
-                                      :clean-sheets (:clean_sheets player)
-                                      :minutes (:minutes player)
-                                      :expected-goals (:expected_goals player)
-                                      :expected-assists (:expected_assists player)
-                                      :expected-goal-involvements (:expected_goal_involvements player)
-                                      :ict-index (:ict_index player)
-                                      :bonus (:bonus player)
-                                      :bps (:bps player)
-                                      :threat (:threat player)
-                                      :creativity (:creativity player)
-                                      :influence (:influence player)
-                                      :status (:status player)
-                                      :team-code (:team_code player)})
+                                      :expected-points (:ep_next player)})
                                    players)]
         player-statistics)
       (println "Failed to retrieve data from the API."))))
-      
 
+(defn scheduled-task []
+  (log/info "Fetching player metrics...")
+  (fetch-player-metrics))
+
+(defn -main
+  [& args]
+  (let [scheduler (quartz/scheduler)]
+    (quartz/start! scheduler)
+    (quartz/schedule! scheduler
+                      (quartz/job
+                       (quartz/job-name "fetch-player-job")
+                       (quartz/with-identity "fetch-player-job" "group1")
+                       (quartz/with-schedule
+                         (quartz/simple-schedule
+                          :repeat-count -1
+                          :repeat-interval (* 24 60 60 1000)
+                          :start-time (java.util.Date. (+ (.getTime (java.util.Date.)) (* 1000 60 60 5)))))))
+    (log/info "Scheduler started.")))
+
+      
 (defn calculate-players-predicted-points
   "A function that calculates a player's predicted points in the next gameweek."
   [player]
-  (let [xg (get player :expected-goals 0)
-        xa (get player :expected-assists 0)]  
-    (+ (* xg 4) (* xa 3))))
+  (let [ep (Double/parseDouble (or (get player :expected-points "0") "0"))]
+    ep))
 
 (defn rank-players
   "A function that ranks players based on predicted points"

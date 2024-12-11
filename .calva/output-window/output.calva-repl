@@ -1,7 +1,144 @@
-(take 1 (fetch-player-metrics))
-({:assists 0, :expected-goals "0.00", :points-per-game "0.0", :clean-sheets 0, :total-points 0, :team-code 3, :creativity "0.0", :first-name "Fábio", :bps 0, :ict-index "0.0", :team 1, :expected-goal-involvements "0.00", :expected-assists "0.00", :bonus 0, :status "u", :id 1, :goals-scored 0, :second-name "Ferreira Vieira", :now-cost 27/5, :form "0.0", :influence "0.0", :threat "0.0", :minutes 0})
+; This is the Calva REPL Window.
+; It's just a file, really, with some special treatment from Calva.
+; Use it as a REPL input prompt if you like. (When the REPL is connected.)
+; TIPS: The keyboard shortcut `ctrl+alt+o r` shows and focuses this window
+; Please see https://calva.io/repl-window/ for more info.
+; Happy coding! ♥️
+
+; TIPS: As with any Clojure file when the REPL is connected:
+; - `alt+enter` evaluates the current top level form.
+; - `ctrl+enter` evaluates the current form.
+; Special for this file:
+; - `alt+up` and `alt+down` traverse up and down the REPL command history
+;    when the cursor is after the last contents at the prompt
+; 
+; See also the Calva Inspector: https://calva.io/inspector/
+
+PLEASE NOTE
+We will update the default location of this file.
+The new default location will be
+  "<projectRootPath>/.calva/repl.calva-repl"
+For now the legacy path is used by default.
+To give yourself a smooth transition, you can opt in
+to the change, by configuring this setting as false:
+  "calva.useLegacyReplWindowPath"
+and then add "**/.calva/repl.calva-repl" to your ".gitignore" file.
+
+
+This file is configured as the output destination for all REPL output.
+You can configure this with the setting:
+  "calva.outputDestinations"
+
+
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Connecting ...
+; Reading port file: file:///c%3A/Users/Nikola/Desktop/Clojure%20projekat/fantasy_app/.nrepl-port ...
+; Using host:port localhost:53237 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
 clj꞉fantasy-app.core꞉> 
-(take 10 (rank-players (fetch-player-metrics)))
-; Execution error (ClassCastException) at fantasy-app.core/calculate-players-predicted-points (form-init8554191055309074813.clj:49).
+"Please see https://calva.io/output/#about-stdout-in-the-repl-window
+about why stdout printed to this file is prepended with `;` to be line comments."
+clj꞉fantasy-app.core꞉> 
+(take 3 (rank-players (fetch-player-metrics )))
+; Syntax error compiling at (c:\Users\Nikola\Desktop\Clojure projekat\fantasy_app\.calva\output-window\output.calva-repl:49:9).
+; Unable to resolve symbol: rank in this context
+clj꞉fantasy-app.core꞉> 
+({:assists 0, :expected-goals 0.8, :points-per-game "1.0", :clean-sheets 0, :total-points 1, :team-code 14, :creativity "0.9", :first-name "Federico", :bps -1, :ict-index "1.6", :team 12, :expected-goal-involvements "0.24", :expected-assists 0.4, :bonus 0, :status "d", :id 636, :goals-scored 0, :second-name "Chiesa", :now-cost 34/5, :form "0.0", :influence "0.2", :threat "15.0", :minutes 18} {:assists 1, :expected-goals 0.93, :points-per-game "1.7", :clean-sheets 1, :total-points 20, :team-code 91, :creativity "40.8", :first-name "Enes", :bps 58, :ict-index "24.3", :team 3, :expected-goal-involvements "2.24", :expected-assists 0.06, :bonus 1, :status "a", :id 65, :goals-scored 1, :second-name "Ünal", :now-cost 27/5, :form "3.0", :influence "64.8", :threat "144.0", :minutes 203} {:assists 0, :expected-goals 0.89, :points-per-game "2.7", :clean-sheets 0, :total-points 41, :team-code 7, :creativity "60.1", :first-name "Jhon", :bps 172, :ict-index "51.4", :team 2, :expected-goal-involvements "4.21", :expected-assists 0.05, :bonus 8, :status "a", :id 38, :goals-scored 5, :second-name "Durán", :now-cost 29/5, :form "2.5", :influence "206.6", :threat "246.0", :minutes 405})
+clj꞉fantasy-app.core꞉> 
+({:assists 0, :expected-goals 0.8, :points-per-game "1.0", :clean-sheets 0, :total-points 1, :team-code 14, :creativity "0.9", :first-name "Federico", :bps -1, :ict-index "1.6", :team 12, :expected-goal-involvements "0.24", :expected-assists 0.4, :bonus 0, :status "d", :id 636, :goals-scored 0, :second-name "Chiesa", :now-cost 34/5, :form "0.0", :influence "0.2", :threat "15.0", :minutes 18} {:assists 1, :expected-goals 0.93, :points-per-game "1.7", :clean-sheets 1, :total-points 20, :team-code 91, :creativity "40.8", :first-name "Enes", :bps 58, :ict-index "24.3", :team 3, :expected-goal-involvements "2.24", :expected-assists 0.06, :bonus 1, :status "a", :id 65, :goals-scored 1, :second-name "Ünal", :now-cost 27/5, :form "3.0", :influence "64.8", :threat "144.0", :minutes 203} {:assists 0, :expected-goals 0.89, :points-per-game "2.7", :clean-sheets 0, :total-points 41, :team-code 7, :creativity "60.1", :first-name "Jhon", :bps 172, :ict-index "51.4", :team 2, :expected-goal-involvements "4.21", :expected-assists 0.05, :bonus 8, :status "a", :id 38, :goals-scored 5, :second-name "Durán", :now-cost 29/5, :form "2.5", :influence "206.6", :threat "246.0", :minutes 405})
+clj꞉fantasy-app.core꞉> 
+#'fantasy-app.core/fetch-player-metrics
+clj꞉fantasy-app.core꞉> 
+; Execution error (ClassCastException) at fantasy-app.core/calculate-players-predicted-points (core.clj:48).
 ; class java.lang.String cannot be cast to class java.lang.Number (java.lang.String and java.lang.Number are in module java.base of loader 'bootstrap')
+clj꞉fantasy-app.core꞉> 
+#'fantasy-app.core/fetch-player-metrics
+clj꞉fantasy-app.core꞉> 
+; Execution error (ClassCastException) at fantasy-app.core/calculate-players-predicted-points (core.clj:48).
+; class java.lang.String cannot be cast to class java.lang.Number (java.lang.String and java.lang.Number are in module java.base of loader 'bootstrap')
+clj꞉fantasy-app.core꞉> 
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Connecting ...
+; Reading port file: file:///c%3A/Users/Nikola/Desktop/Clojure%20projekat/fantasy_app/.nrepl-port ...
+; Using host:port localhost:61410 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉fantasy-app.core꞉> 
+"Please see https://calva.io/output/#about-stdout-in-the-repl-window
+about why stdout printed to this file is prepended with `;` to be line comments."
+clj꞉fantasy-app.core꞉> 
+; Execution error (ClassCastException) at fantasy-app.core/calculate-players-predicted-points (core.clj:50).
+; class java.lang.String cannot be cast to class java.lang.Number (java.lang.String and java.lang.Number are in module java.base of loader 'bootstrap')
+clj꞉fantasy-app.core꞉> 
+#'fantasy-app.core/calculate-players-predicted-points
+clj꞉fantasy-app.core꞉> 
+(take 3 (rank-players (fetch-player-metrics)))
+({:assists 1, :expected-goals "12.85", :points-per-game "6.5", :clean-sheets 3, :total-points 98, :team-code 43, :creativity "142.1", :first-name "Erling", :bps 438, :ict-index "158.0", :team 13, :expected-goal-involvements "13.71", :expected-assists "0.86", :bonus 15, :status "a", :id 351, :goals-scored 13, :second-name "Haaland", :now-cost 149/10, :form "4.0", :influence "527.4", :threat "908.0", :minutes 1349} {:assists 8, :expected-goals "10.26", :points-per-game "10.8", :clean-sheets 7, :total-points 151, :team-code 14, :creativity "354.6", :first-name "Mohamed", :bps 483, :ict-index "180.8", :team 12, :expected-goal-involvements "13.18", :expected-assists "2.92", :bonus 28, :status "a", :id 328, :goals-scored 13, :second-name "Salah", :now-cost 133/10, :form "14.7", :influence "683.0", :threat "772.0", :minutes 1227} {:assists 7, :expected-goals "9.61", :points-per-game "8.3", :clean-sheets 3, :total-points 125, :team-code 8, :creativity "545.5", :first-name "Cole", :bps 517, :ict-index "167.3", :team 6, :expected-goal-involvements "13.36", :expected-assists "3.75", :bonus 19, :status "a", :id 182, :goals-scored 11, :second-name "Palmer", :now-cost 111/10, :form "10.2", :influence "628.4", :threat "498.0", :minutes 1298})
+clj꞉fantasy-app.core꞉> 
+({:assists 1, :expected-goals "12.85", :points-per-game "6.5", :clean-sheets 3, :total-points 98, :team-code 43, :creativity "142.1", :first-name "Erling", :bps 438, :ict-index "158.0", :team 13, :expected-goal-involvements "13.71", :expected-assists "0.86", :bonus 15, :status "a", :id 351, :goals-scored 13, :second-name "Haaland", :now-cost 149/10, :form "4.0", :influence "527.4", :threat "908.0", :minutes 1349} {:assists 8, :expected-goals "10.26", :points-per-game "10.8", :clean-sheets 7, :total-points 151, :team-code 14, :creativity "354.6", :first-name "Mohamed", :bps 483, :ict-index "180.8", :team 12, :expected-goal-involvements "13.18", :expected-assists "2.92", :bonus 28, :status "a", :id 328, :goals-scored 13, :second-name "Salah", :now-cost 133/10, :form "14.7", :influence "683.0", :threat "772.0", :minutes 1227} {:assists 7, :expected-goals "9.61", :points-per-game "8.3", :clean-sheets 3, :total-points 125, :team-code 8, :creativity "545.5", :first-name "Cole", :bps 517, :ict-index "167.3", :team 6, :expected-goal-involvements "13.36", :expected-assists "3.75", :bonus 19, :status "a", :id 182, :goals-scored 11, :second-name "Palmer", :now-cost 111/10, :form "10.2", :influence "628.4", :threat "498.0", :minutes 1298})
+clj꞉fantasy-app.core꞉> 
+#'fantasy-app.core/fetch-player-metrics
+clj꞉fantasy-app.core꞉> 
+#'fantasy-app.core/rank-players
+clj꞉fantasy-app.core꞉> 
+(take 1 (rank-players (fetch-player-metrics)))
+; Execution error (NullPointerException) at fantasy-app.core/rank-players$fn (form-init17199812331222972123.clj:40).
+; Cannot invoke "Object.getClass()" because "x" is null
+clj꞉fantasy-app.core꞉> 
+#'fantasy-app.core/rank-players
+clj꞉fantasy-app.core꞉> 
+; Execution error (ClassCastException) at fantasy-app.core/rank-players$fn (form-init17199812331222972123.clj:40).
+; class java.lang.String cannot be cast to class java.lang.Number (java.lang.String and java.lang.Number are in module java.base of loader 'bootstrap')
+clj꞉fantasy-app.core꞉> 
+#'fantasy-app.core/fetch-player-metrics
+clj꞉fantasy-app.core꞉> 
+#'fantasy-app.core/calculate-players-predicted-points
+clj꞉fantasy-app.core꞉> 
+#'fantasy-app.core/rank-players
+clj꞉fantasy-app.core꞉> 
+({:id 328, :first-name "Mohamed", :second-name "Salah", :team 12, :now-cost 133/10, :total-points 151, :form "14.7", :expected-points "15.7"} {:id 182, :first-name "Cole", :second-name "Palmer", :team 6, :now-cost 111/10, :total-points 125, :form "10.2", :expected-points "10.7"} {:id 17, :first-name "Bukayo", :second-name "Saka", :team 1, :now-cost 21/2, :total-points 103, :form "9.0", :expected-points "10.0"})
+clj꞉fantasy-app.core꞉> 
+#'fantasy-app.core/fetch-player-metrics
+clj꞉fantasy-app.core꞉> 
+; Execution error (ClassCastException) at fantasy-app.core/fetch-player-metrics$fn (form-init17199812331222972123.clj:22).
+; class clojure.lang.Ratio cannot be cast to class java.lang.String (clojure.lang.Ratio is in unnamed module of loader 'app'; java.lang.String is in module java.base of loader 'bootstrap')
+clj꞉fantasy-app.core꞉> 
+#'fantasy-app.core/fetch-player-metrics
+clj꞉fantasy-app.core꞉> 
+(type (:now-cost (get 1 fetch-player-metrics)))
+nil
+clj꞉fantasy-app.core꞉> 
+(take 1 (rank-players (fetch-player-metrics)))
+({:id 328, :first-name "Mohamed", :second-name "Salah", :team 12, :now-cost 133, :total-points 151, :form "14.7", :expected-points "15.7"})
+clj꞉fantasy-app.core꞉> 
+(type (:now-cost ((take 1 (rank-players (fetch-player-metrics))))))
+; Execution error (ClassCastException) at fantasy-app.core/eval6559 (form-init17199812331222972123.clj:127).
+; class clojure.lang.LazySeq cannot be cast to class clojure.lang.IFn (clojure.lang.LazySeq and clojure.lang.IFn are in unnamed module of loader 'app')
+clj꞉fantasy-app.core꞉> 
+#'fantasy-app.core/fetch-player-metrics
+clj꞉fantasy-app.core꞉> 
+(take 1 (rank-players (fetch-player-metrics)))
+({:id 328, :first-name "Mohamed", :second-name "Salah", :team 12, :now-cost 133/10, :total-points 151, :form "14.7", :expected-points "15.7"})
+clj꞉fantasy-app.core꞉> 
+#'fantasy-app.core/fetch-player-metrics
+clj꞉fantasy-app.core꞉> 
+({:id 328, :first-name "Mohamed", :second-name "Salah", :team 12, :now-cost 13.3, :total-points 151, :form "14.7", :expected-points "15.7"})
+clj꞉fantasy-app.core꞉> 
+(fetcg-gameweeks)#'fantasy-app.core/fetch-gameweeks
+clj꞉fantasy-app.core꞉> 
+(fetch-gameweeks)
+({:id 1, :name "Gameweek 1", :deadline_time "2024-08-16T17:30:00Z"} {:id 2, :name "Gameweek 2", :deadline_time "2024-08-24T10:00:00Z"} {:id 3, :name "Gameweek 3", :deadline_time "2024-08-31T10:00:00Z"} {:id 4, :name "Gameweek 4", :deadline_time "2024-09-14T10:00:00Z"} {:id 5, :name "Gameweek 5", :deadline_time "2024-09-21T10:00:00Z"} {:id 6, :name "Gameweek 6", :deadline_time "2024-09-28T10:00:00Z"} {:id 7, :name "Gameweek 7", :deadline_time "2024-10-05T10:00:00Z"} {:id 8, :name "Gameweek 8", :deadline_time "2024-10-19T10:00:00Z"} {:id 9, :name "Gameweek 9", :deadline_time "2024-10-25T17:30:00Z"} {:id 10, :name "Gameweek 10", :deadline_time "2024-11-02T11:00:00Z"} {:id 11, :name "Gameweek 11", :deadline_time "2024-11-09T13:30:00Z"} {:id 12, :name "Gameweek 12", :deadline_time "2024-11-23T11:00:00Z"} {:id 13, :name "Gameweek 13", :deadline_time "2024-11-29T18:30:00Z"} {:id 14, :name "Gameweek 14", :deadline_time "2024-12-03T18:00:00Z"} {:id 15, :name "Gameweek 15", :deadline_time "2024-12-07T11:00:00Z"} {:id 16, :name "Gameweek 16", :deadline_time "2024-12-14T13:30:00Z"} {:id 17, :name "Gameweek 17", :deadline_time "2024-12-21T11:00:00Z"} {:id 18, :name "Gameweek 18", :deadline_time "2024-12-26T11:00:00Z"} {:id 19, :name "Gameweek 19", :deadline_time "2024-12-29T13:00:00Z"} {:id 20, :name "Gameweek 20", :deadline_time "2025-01-04T11:00:00Z"} {:id 21, :name "Gameweek 21", :deadline_time "2025-01-14T18:00:00Z"} {:id 22, :name "Gameweek 22", :deadline_time "2025-01-18T11:00:00Z"} {:id 23, :name "Gameweek 23", :deadline_time "2025-01-25T13:30:00Z"} {:id 24, :name "Gameweek 24", :deadline_time "2025-02-01T11:00:00Z"} {:id 25, :name "Gameweek 25", :deadline_time "2025-02-14T18:30:00Z"} {:id 26, :name "Gameweek 26", :deadline_time "2025-02-21T18:30:00Z"} {:id 27, :name "Gameweek 27", :deadline_time "2025-02-25T18:15:00Z"} {:id 28, :name "Gameweek 28", :deadline_time "2025-03-08T13:30:00Z"} {:id 29, :name "Gameweek 29", :deadline_time "2025-03-15T13:30:00Z"} {:id 30, :name "Gameweek 30", :deadline_time "2025-04-01T17:15:00Z"} {:id 31, :name "Gameweek 31", :deadline_time "2025-04-05T12:30:00Z"} {:id 32, :name "Gameweek 32", :deadline_time "2025-04-12T12:30:00Z"} {:id 33, :name "Gameweek 33", :deadline_time "2025-04-19T12:30:00Z"} {:id 34, :name "Gameweek 34", :deadline_time "2025-04-26T12:30:00Z"} {:id 35, :name "Gameweek 35", :deadline_time "2025-05-03T12:30:00Z"} {:id 36, :name "Gameweek 36", :deadline_time "2025-05-10T12:30:00Z"} {:id 37, :name "Gameweek 37", :deadline_time "2025-05-18T12:30:00Z"} {:id 38, :name "Gameweek 38", :deadline_time "2025-05-25T13:30:00Z"})
 clj꞉fantasy-app.core꞉> 
